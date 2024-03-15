@@ -1,5 +1,5 @@
-import NyTimesLogo from '@/assets/new-york-times-logo.svg';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import NyTimesLogo from './assets/new-york-times-logo.svg';
 import Router from './router';
 
 const queryClient = new QueryClient()
