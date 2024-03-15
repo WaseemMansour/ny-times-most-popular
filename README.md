@@ -12,6 +12,16 @@ The NY Times Most Popular Articles is a web application that connects to the New
 
 The app is built with Vite React, showcasing best practices in software development.
 
+### # Prototype
+![alt prototype](src/assets/app-prototype.png)
+
+### # Screenshots
+![alt articles-list](src/assets/articles-list.png)
+
+![alt articles-list-skeleton](src/assets/articles-list-skeleton.png)
+
+![alt articles-details](src/assets/article-details.png)
+
 
 ## # Installation
 Clone the repository and install dependencies:
