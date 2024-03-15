@@ -17,6 +17,7 @@
     "@emotion/styled": "^11.11.0",
     "@fontsource-variable/domine": "^5.0.17",
     "@fontsource/domine": "^5.0.17",
+    "@fontsource/poppins": "^5.0.12",
     "@tanstack/react-query": "^5.28.0",
     "framer-motion": "^11.0.13",
     "localforage": "^1.10.0",
