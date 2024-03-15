@@ -21,7 +21,7 @@ const CustomCard = ({ title, imageUrl, date }: Props) => {
           <Image
             objectFit='cover'
             src={imageUrl}
-            fallbackSrc='https://via.placeholder.com/150'
+            fallbackSrc='https://placehold.co/210x140'
             width={210}
             height={140}
             backgroundSize={'cover'}

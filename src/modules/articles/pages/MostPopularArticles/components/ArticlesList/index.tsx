@@ -2,7 +2,7 @@ import { Link as ChakraLink, Grid, GridItem } from "@chakra-ui/react";
 import { Link as ReactRouterLink } from 'react-router-dom';
 import { Card } from "../../../../../../components/common/Card";
 import { Article } from "../../../../../../types";
-import { extractArticleSlug } from '../../../../../../utils/getSlug';
+import { extractArticleSlug } from '../../../../../../utils/extractArticleSlug';
 
 type Props = {
   articles: Article[];
