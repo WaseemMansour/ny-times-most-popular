@@ -1,26 +1,18 @@
+import { ChakraProvider } from '@chakra-ui/react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import NyTimesLogo from './assets/new-york-times-logo.svg';
 import Router from './router';
+import { theme } from './style/theme';
 
 const queryClient = new QueryClient()
 
 function App() {
 
   return (
-    <div>
-        <h1>
-        <img
-            src={NyTimesLogo}
-            alt="The New York Times Logo"
-            width={50}
-            height={40}
-          />
-          NY Times
-        </h1>
+    <ChakraProvider theme={theme}>
       <QueryClientProvider client={queryClient}>
         <Router />
       </QueryClientProvider>
-    </div>
+    </ChakraProvider>
   )
 }
 

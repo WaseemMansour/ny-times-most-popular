@@ -2136,6 +2136,16 @@
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.57.0.tgz#a5417ae8427873f1dd08b70b3574b453e67b5f7f"
   integrity sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==
 
+"@fontsource-variable/domine@^5.0.17":
+  version "5.0.17"
+  resolved "https://registry.yarnpkg.com/@fontsource-variable/domine/-/domine-5.0.17.tgz#83cb056679a0587d9137e24c9b8f9c7f3b12b44c"
+  integrity sha512-efwP7r6vnHwfpSCEmEY37luhVvgK2PXNm8N4MI30f9gurlVUHRCiiJFTiZJPSnEoYon7fQB0/yq8IRihF40Heg==
+
+"@fontsource/domine@^5.0.17":
+  version "5.0.17"
+  resolved "https://registry.yarnpkg.com/@fontsource/domine/-/domine-5.0.17.tgz#d4d279a2f5e60dd6b183d2c854920aa2296aec95"
+  integrity sha512-lHyBhVHpB3ZozfKtgf4/KdtyX08wsUwNWg7RF4eqNzgAMBCblRjeKRIXOK/eQ72gZouQtyRK8QkSI+rFIsQSXw==
+
 "@humanwhocodes/config-array@^0.11.14":
   version "0.11.14"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.11.14.tgz#d78e481a039f7566ecc9660b4ea7fe6b1fec442b"

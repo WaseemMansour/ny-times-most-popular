@@ -15,6 +15,8 @@
     "@chakra-ui/react": "^2.8.2",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.0",
+    "@fontsource-variable/domine": "^5.0.17",
+    "@fontsource/domine": "^5.0.17",
     "@tanstack/react-query": "^5.28.0",
     "framer-motion": "^11.0.13",
     "localforage": "^1.10.0",

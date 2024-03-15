@@ -1,8 +1,11 @@
 
 import { useState } from 'react';
 
+import { Box } from '@chakra-ui/react';
+import Loader from '../../../../components/common/Loader';
 import { PopularPeriod } from '../../../../types';
 import { useGetMostPopularArticles } from '../../hooks/useGetMostPopularArticles';
+import PopularPeriodNav from './components/PopularPeriodNav';
 
 export const MostPopularArticles = () => {
   const [popularPeriod, setPopularPeriod] = useState<PopularPeriod>(1);
@@ -13,37 +16,20 @@ export const MostPopularArticles = () => {
   }
 
   return (
-    <>
-      {popularPeriod}
-      <div style={{ display: "flex", justifyContent: "space-between" }}>
-        <button
-          style={{ margin: "0 5px", padding: "4px 10px" }}
-          onClick={() => setPopularPeriod(1)}
-        >
-          Today
-        </button>
-        <button
-          style={{ margin: "0 5px", padding: "4px 10px" }}
-          onClick={() => setPopularPeriod(7)}
-        >
-          Last week
-        </button>
-        <button
-          style={{ margin: "0 5px", padding: "4px 10px" }}
-          onClick={() => setPopularPeriod(30)}
-        >
-          Last month
-        </button>
-      </div>
+    <Box>
+      <PopularPeriodNav 
+        popularPeriod={popularPeriod} 
+        setPopularPeriod={setPopularPeriod} 
+      />
 
-      { isLoading ? (
-        <p>Loading...</p>
-      ) : data?.results?.length ? (
-        <div data-testid="articles-list"></div>
-      ) : (
-        <div data-testid="no-articles-found"></div>
-      )}
-    </>
+      { isLoading 
+        ? <Loader /> 
+        : data?.results?.length 
+          ? <div data-testid="articles-list"></div>
+          : <div data-testid="no-articles-found"></div>
+      }
+
+    </Box>
   );
 };
 
