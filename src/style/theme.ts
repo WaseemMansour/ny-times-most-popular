@@ -1,5 +1,5 @@
 import { extendTheme } from '@chakra-ui/react';
-import '@fontsource-variable/domine';
+import '@fontsource/poppins';
 
 
 
@@ -7,7 +7,12 @@ const theme = extendTheme({
   components: {
     Heading: {
       baseStyle: {
-        fontFamily: 'Domine',
+        fontFamily: '"Poppins", sans-serif',
+      },
+    },
+    Link: {
+      _hover: {
+        textDecoration: 'none',
       },
     }
   },
@@ -15,17 +20,17 @@ const theme = extendTheme({
     global: {
       // styles here will be applied globally
       "html, body": {
-        fontFamily: 'Domine',
+        fontFamily: '"Poppins", sans-serif',
         color: 'gray.800',
         lineHeight: 'tall',
       },
       h1: {
-        fontFamily: 'Domine',
+        fontFamily: '"Poppins", sans-serif',
       },
       a: {
         color: 'teal.500',
         _hover: {
-          textDecoration: 'underline',
+          textDecoration: 'none !important',
         },
       },
       // You can add other global styles here
