@@ -15,8 +15,7 @@
     "test:watch": "jest --watchAll",
     "test:coverage": "jest --coverage",
     "test:clearcache": "jest --clearCache",
-    "prepare": "husky",
-    "postinstall": "husky install"
+    "prepare": "husky"
   },
   "husky": {
     "hooks": {
