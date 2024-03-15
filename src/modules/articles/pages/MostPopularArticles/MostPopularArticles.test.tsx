@@ -1,12 +1,18 @@
 import { render } from '@testing-library/react';
 import { MostPopularArticles } from '.';
 
+import { MemoryRouter } from 'react-router-dom';
 import { mockMostPopularArticlesResFixture, mockMostPopularResNoArticlesFixture } from '../../../../__tests__/__fixtures__/mostPopularArticles.fixture';
 import { MostPopularArticlesRes } from '../../../../types';
 import { useGetMostPopularArticles } from '../../hooks/useGetMostPopularArticles';
 
 jest.mock('../../hooks/useGetMostPopularArticles', () => ({
   useGetMostPopularArticles: jest.fn(),
+}));
+
+jest.mock('react-router-dom', () => ({
+  ...jest.requireActual('react-router-dom'),
+  Link: ({ children }: { children: React.ReactNode }) => children,
 }));
 
 describe("Most Popular Articles", () => {
@@ -43,7 +49,11 @@ describe("Most Popular Articles", () => {
       isError: false,
     }));
 
-    const screen = render(<MostPopularArticles />);
+    const screen = render(
+      <MemoryRouter>
+        <MostPopularArticles />
+      </MemoryRouter>
+    );
     expect(await screen.findByTestId("no-articles-found")).toBeDefined();
   })
 });

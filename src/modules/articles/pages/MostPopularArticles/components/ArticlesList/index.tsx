@@ -12,7 +12,9 @@ const ArticlesList = ({ articles }: Props) => {
 
   return (
     <>
-    <Grid templateColumns='repeat(4, 1fr)' gap={6} margin='2rem 0 4rem'>
+    <Grid 
+      data-testid='articles-list'
+      templateColumns='repeat(4, 1fr)' gap={6} margin='2rem 0 4rem'>
       {articles.map((article) => {
         const slug = extractArticleSlug(article.url);
         const articleLink = `/articles/${slug}`;
