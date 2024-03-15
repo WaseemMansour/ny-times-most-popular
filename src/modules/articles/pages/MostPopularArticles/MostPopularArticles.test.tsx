@@ -1,7 +1,5 @@
 import { render } from '@testing-library/react';
 import { MostPopularArticles } from '.';
-
-import { MemoryRouter } from 'react-router-dom';
 import { mockMostPopularArticlesResFixture, mockMostPopularResNoArticlesFixture } from '../../../../__tests__/__fixtures__/mostPopularArticles.fixture';
 import { MostPopularArticlesRes } from '../../../../types';
 import { useGetMostPopularArticles } from '../../hooks/useGetMostPopularArticles';
@@ -50,9 +48,7 @@ describe("Most Popular Articles", () => {
     }));
 
     const screen = render(
-      <MemoryRouter>
-        <MostPopularArticles />
-      </MemoryRouter>
+      <MostPopularArticles />
     );
     expect(await screen.findByTestId("no-articles-found")).toBeDefined();
   })
