@@ -52,4 +52,5 @@ describe("Most Popular Articles", () => {
     );
     expect(await screen.findByTestId("no-articles-found")).toBeDefined();
   })
+  
 });
