@@ -9,12 +9,14 @@ module.exports = {
     '<rootDir>/cypress',
     '<rootDir>/src/__tests__/__fixtures__',
     '<rootDir>/src/__tests__/__mocks__',
+    '.*/.*\\.pw\\.test\\.(js|ts)$',
   ],
   testPathIgnorePatterns: [
     '<rootDir>/node_modules/',
     '<rootDir>/cypress',
     '<rootDir>/src/__tests__/__fixtures__',
     '<rootDir>/src/__tests__/__mocks__',
+    '.*/.*\\.pw\\.test\\.(js|ts)$',
   ],
   moduleNameMapper: {
     "^.+\\.svg$": "jest-svg-transformer",

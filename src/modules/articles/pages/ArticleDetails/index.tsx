@@ -12,11 +12,11 @@ const ArticleDetails = () => {
   const articleMeta = extractArticleMeta(article);
   return (
     <Box maxW="640px" mx="auto">
-      <Box>
+      <Box data-testid='back-to-articles-list'>
         <Link to={'/'}>
           <Button
             colorScheme={'pink'} 
-            // variant={popularPeriod === value ? 'solid' : 'ghost'} 
+            data-testid='back-to-articles-list'
             margin='0.5rem 0 2rem 0'
             fontWeight={400}
             borderRadius={0}

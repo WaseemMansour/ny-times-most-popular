@@ -15,12 +15,13 @@ const ArticlesList = ({ articles }: Props) => {
     <Grid 
       data-testid='articles-list'
       templateColumns='repeat(4, 1fr)' gap={6} margin='2rem 0 4rem'>
-      {articles.map((article) => {
+      {articles.map((article, i) => {
         const slug = extractArticleSlug(article.url);
         const articleLink = `/articles/${slug}`;
         return (
           <GridItem key={article.id}>
-            <ChakraLink 
+            <ChakraLink
+              data-testid={`article-link-${i}`} 
               as={ReactRouterLink} to={articleLink}
               state={{ article }}
             >
