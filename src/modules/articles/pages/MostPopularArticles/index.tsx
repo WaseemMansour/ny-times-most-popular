@@ -2,9 +2,10 @@
 import { useState } from 'react';
 
 import { Box } from '@chakra-ui/react';
-import Loader from '../../../../components/common/Loader';
 import { PopularPeriod } from '../../../../types';
 import { useGetMostPopularArticles } from '../../hooks/useGetMostPopularArticles';
+import ArticlesList from './components/ArticlesList';
+import { LoadingSkeleton } from './components/ArticlesList/LoadingSkeleton';
 import PopularPeriodNav from './components/PopularPeriodNav';
 
 export const MostPopularArticles = () => {
@@ -21,11 +22,10 @@ export const MostPopularArticles = () => {
         popularPeriod={popularPeriod} 
         setPopularPeriod={setPopularPeriod} 
       />
-
       { isLoading 
-        ? <Loader /> 
+        ? <LoadingSkeleton />
         : data?.results?.length 
-          ? <div data-testid="articles-list"></div>
+          ? <ArticlesList articles={data.results} />
           : <div data-testid="no-articles-found"></div>
       }
 

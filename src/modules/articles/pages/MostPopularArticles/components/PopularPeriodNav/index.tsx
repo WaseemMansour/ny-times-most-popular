@@ -24,6 +24,7 @@ const PopularPeriodNav = ({ popularPeriod, setPopularPeriod }) => {
           margin='0 0.5rem'
           border={`1px solid ${popularPeriod === value} ? 'pink' : 'transparent'`}
           fontWeight={400}
+          borderRadius={0}
         >
           <Text>
             {label}
